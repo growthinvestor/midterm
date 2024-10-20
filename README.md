@@ -104,26 +104,26 @@ Environment variables are used for dynamic configuration, particularly for loggi
 
 1. Install Dependencies
 
-To install the required dependencies, ensure you're in the project root directory and run:
-pip install -r requirements.txt
+    To install the required dependencies, ensure you're in the project root directory and run:
+    pip install -r requirements.txt
 
 2. Create .env File
-Create a .env file in the root directory to configure logging:
+    Create a .env file in the root directory to configure logging:
 
 3. Run the Application
-To run the calculator, activate the virtual environment (myenv) and start the REPL:
+    To run the calculator, activate the virtual environment (myenv) and start the REPL:
 
-source myenv/bin/activate
-python -m calculator.repl
+    source myenv/bin/activate
+    python -m calculator.repl
 
 4. Run Tests
-Run Pytest to execute all tests:
+    Run Pytest to execute all tests:
 
-Continuous Integration:
+# Continuous Integration:
 
 GitHub Actions (.github/workflows/python-app.yml) is used to automate the testing process. Each time code is pushed to the repository, the tests are executed automatically, ensuring continuous integration.
 
-Exception Handling:
+# Exception Handling:
 
 The project employs both LBYL (Look Before You Leap) and EAFP (Easier to Ask for Forgiveness than Permission) approaches:
 
