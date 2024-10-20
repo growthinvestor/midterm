@@ -1,5 +1,4 @@
-def square(a):
-    return a ** 2
+class ExamplePlugin:
+    def greet(self, name):
+        return f"Hello, {name}!"
 
-def register_plugin():
-    return {"square": square}

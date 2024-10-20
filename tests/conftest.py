@@ -1,6 +1,7 @@
 import pytest
-from calculator import core
+import os
+import sys
 
-@pytest.fixture
-def sample_values():
-    return 2, 3
+@pytest.fixture(scope="session", autouse=True)
+def setup_env():
+    os.environ['LOG_LEVEL'] = 'DEBUG'

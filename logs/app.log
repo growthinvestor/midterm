@@ -1,0 +1,46 @@
+2024-10-19 23:02:34,587 - INFO - Calculator REPL initialized, history loaded.
+2024-10-19 23:02:34,587 - INFO - REPL session started.
+2024-10-19 23:02:37,243 - INFO - User selected command: 1
+2024-10-19 23:02:40,395 - INFO - User inputs: a=2.0, b=3.0
+2024-10-19 23:02:40,397 - INFO - Operation performed: 2.0 + 3.0, result: 5.0
+2024-10-19 23:02:51,676 - INFO - User selected command: 4
+2024-10-19 23:02:52,331 - INFO - User inputs: a=4.0, b=4.0
+2024-10-19 23:02:52,332 - INFO - Operation performed: 4.0 / 4.0, result: 1.0
+2024-10-19 23:03:28,691 - INFO - User selected command: 6
+2024-10-19 23:03:28,691 - INFO - User exited the calculator.
+2024-10-20 09:42:36,153 - INFO - Calculator REPL initialized, history loaded.
+2024-10-20 09:42:36,155 - INFO - REPL session started.
+2024-10-20 09:42:39,945 - INFO - User selected command: 2
+2024-10-20 09:42:40,921 - INFO - User inputs: a=2.0, b=2.0
+2024-10-20 09:42:40,922 - INFO - Operation performed: 2.0 - 2.0, result: 0.0
+2024-10-20 09:42:48,409 - INFO - User selected command: 1
+2024-10-20 09:42:49,090 - INFO - User inputs: a=1.0, b=1.0
+2024-10-20 09:42:49,091 - INFO - Operation performed: 1.0 + 1.0, result: 2.0
+2024-10-20 09:42:51,490 - INFO - User selected command: 
+2024-10-20 09:42:51,490 - WARNING - Invalid command entered: 
+2024-10-20 09:42:53,538 - INFO - User selected command: 2
+2024-10-20 09:42:54,569 - INFO - User inputs: a=3.0, b=3.0
+2024-10-20 09:42:54,570 - INFO - Operation performed: 3.0 - 3.0, result: 0.0
+2024-10-20 09:42:57,129 - INFO - User selected command: e
+2024-10-20 09:42:57,130 - WARNING - Invalid command entered: e
+2024-10-20 09:42:58,642 - INFO - User selected command: e
+2024-10-20 09:42:58,642 - WARNING - Invalid command entered: e
+2024-10-20 09:43:09,594 - INFO - User selected command: e
+2024-10-20 09:43:09,594 - WARNING - Invalid command entered: e
+2024-10-20 09:43:12,986 - INFO - User selected command: 5
+2024-10-20 09:43:12,995 - INFO - Displayed calculation history.
+2024-10-20 09:43:27,515 - INFO - User selected command: 4
+2024-10-20 09:43:31,866 - ERROR - ValueError encountered: could not convert string to float: 'e'
+2024-10-20 09:43:37,402 - INFO - User selected command: 4
+2024-10-20 09:43:38,083 - ERROR - ValueError encountered: could not convert string to float: 'e'
+2024-10-20 09:43:39,355 - INFO - User selected command: 4
+2024-10-20 09:43:41,610 - INFO - User inputs: a=3.0, b=3.0
+2024-10-20 09:43:41,612 - INFO - Operation performed: 3.0 / 3.0, result: 1.0
+2024-10-20 09:45:56,269 - INFO - User selected command: 6
+2024-10-20 09:45:56,269 - INFO - User exited the calculator.
+2024-10-20 09:49:08,278 - INFO - Calculator REPL initialized, history loaded.
+2024-10-20 09:49:08,278 - INFO - REPL session started.
+2024-10-20 09:49:10,169 - INFO - User selected command: s
+2024-10-20 09:49:10,169 - WARNING - Invalid command entered: s
+2024-10-20 09:49:12,897 - INFO - User selected command: 6
+2024-10-20 09:49:12,898 - INFO - User exited the calculator.
