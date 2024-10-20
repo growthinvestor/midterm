@@ -1,23 +1,14 @@
-import logging
+class Calculator:
+    def add(self, a, b):
+        return a + b
 
-logger = logging.getLogger(__name__)
+    def subtract(self, a, b):
+        return a - b
 
-def add(a, b):
-    try:
-        result = a + b
-        logger.info(f"Add: {a} + {b} = {result}")
-        return result
-    except TypeError as e:
-        logger.error(f"Error adding {a} and {b}: {e}")
-        raise
+    def multiply(self, a, b):
+        return a * b
 
-def subtract(a, b):
-    try:
-        result = a - b
-        logger.info(f"Subtract: {a} - {b} = {result}")
-        return result
-    except TypeError as e:
-        logger.error(f"Error subtracting {a} and {b}: {e}")
-        raise
-
-# Add multiply and divide functions similarly
+    def divide(self, a, b):
+        if b == 0:
+            raise ValueError("Cannot divide by zero.")
+        return a / b
