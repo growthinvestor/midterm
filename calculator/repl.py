@@ -1,32 +1,44 @@
-import cmd
-from calculator import core, history
+import sys
+from calculator.core import Calculator
+from calculator.history import HistoryManager
 
-class CalculatorREPL(cmd.Cmd):
-    prompt = '> '
-    
-    def do_add(self, args):
-        """Add two numbers: add 2 3"""
-        try:
-            a, b = map(float, args.split())
-            print(core.add(a, b))
-        except Exception as e:
-            print(f"Error: {e}")
+class REPL:
+    def __init__(self):
+        self.calculator = Calculator()
+        self.history_manager = HistoryManager('data/history.csv')
+        self.history_manager.load_history()
 
-    def do_subtract(self, args):
-        """Subtract two numbers: subtract 5 2"""
-        try:
-            a, b = map(float, args.split())
-            print(core.subtract(a, b))
-        except Exception as e:
-            print(f"Error: {e}")
+    def start(self):
+        print("Welcome to the Advanced Calculator!")
+        while True:
+            command = input("Enter command (add, subtract, multiply, divide, history, quit): ")
+            if command.lower() == 'quit':
+                print("Exiting...")
+                sys.exit()
+            elif command.lower() == 'history':
+                print(self.history_manager.get_history())
+                continue
 
-    def do_history(self, _):
-        """Display the history of calculations."""
-        print(history.get_history())
+            try:
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
 
-    def do_exit(self, _):
-        """Exit the calculator."""
-        return True
+                if command.lower() == 'add':
+                    result = self.calculator.add(a, b)
+                    self.history_manager.add_record(f"{a} + {b}", result)
+                elif command.lower() == 'subtract':
+                    result = self.calculator.subtract(a, b)
+                    self.history_manager.add_record(f"{a} - {b}", result)
+                elif command.lower() == 'multiply':
+                    result = self.calculator.multiply(a, b)
+                    self.history_manager.add_record(f"{a} * {b}", result)
+                elif command.lower() == 'divide':
+                    result = self.calculator.divide(a, b)
+                    self.history_manager.add_record(f"{a} / {b}", result)
+                else:
+                    print("Invalid command.")
+                    continue
 
-if __name__ == '__main__':
-    CalculatorREPL().cmdloop()
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
