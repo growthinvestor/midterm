@@ -1,13 +1,19 @@
-from calculator import history
-import pandas as pd
 import os
+import pytest
+from calculator.history import HistoryManager
 
-def test_save_history():
-    history.save_history("add 2 3", 5)
-    df = pd.read_csv("calculation_history.csv")
-    assert df.iloc[-1]['operation'] == "add 2 3"
-    assert df.iloc[-1]['result'] == 5
+@pytest.fixture
+def history_manager(tmpdir):
+    history_file = tmpdir.join("history.csv")
+    hm = HistoryManager(str(history_file))
+    return hm
 
-def test_clear_history():
-    history.clear_history()
-    assert not os.path.exists("calculation_history.csv")
+def test_load_history(history_manager):
+    history_manager.load_history()
+    assert history_manager.history.empty
+
+def test_add_record(history_manager):
+    history_manager.add_record("2 + 3", 5)
+    assert len(history_manager.history) == 1
+    assert history_manager.history.iloc[0]["operation"] == "2 + 3"
+    assert history_manager.history.iloc[0]["result"] == 5
