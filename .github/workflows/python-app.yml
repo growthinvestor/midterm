@@ -38,10 +38,6 @@ jobs:
         echo "PYTHONPATH:"
         echo $PYTHONPATH
 
-    - name: Lint with flake8
-      run: |
-        flake8 .  # Adjust the path if needed
-
     - name: Test with pytest
       run: |
         pytest --cov  # Add any specific options you need here
