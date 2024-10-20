@@ -14,7 +14,7 @@ Continuous integration using GitHub Actions and comprehensive testing with Pytes
 
 # Here is the File Structure
 
-# .github/workflows/: 
+ .github/workflows/: 
 
 Contains the GitHub Actions workflow configuration file for running automated tests with every commit.
 
@@ -82,22 +82,22 @@ This module implements the basic arithmetic functions such as addition, subtract
 2. REPL (Read-Eval-Print Loop) (repl.py)
 This file implements an interactive command-line interface, where users can input operations and receive results. The REPL processes user commands and invokes the corresponding functions from the core module or plugins.
 
-Tested in test_repl.py to ensure it handles user input and manages commands properly.
+    Tested in test_repl.py to ensure it handles user input and manages commands properly.
 
 3. History Management (history.py)
 This module manages the calculation history using Pandas. It reads from and writes to history.csv located in the data/ folder. Users can review their calculation history, which is loaded automatically upon starting the application.
 
-test_history.py contains tests for saving and retrieving calculation history.
+    test_history.py contains tests for saving and retrieving calculation history.
 
 4. Plugins (plugins/)
 The calculator supports a plugin system that allows users to extend its functionality with new operations. Example plugins like cube_plugin.py (calculates the cube of a number) and sqrt_plugin.py (calculates the square root) are included in the plugins/ folder.
 
-Plugins are tested in test_plugins.py to verify correct registration and operation.
+    Plugins are tested in test_plugins.py to verify correct registration and operation.
 
 5. Logging Configuration (logging.config.py)
 The logging module is configured using environment variables stored in .env and the logging.conf file. The logging system captures application events, errors, and other runtime information, saving it to logs/app.log.
 
-All logs are written to the app.log file inside the logs/ directory.
+    All logs are written to the app.log file inside the logs/ directory.
 
 6. Environment Variables (.env)
 Environment variables are used for dynamic configuration, particularly for logging. The .env file contains configuration options such as log level and file destination.
