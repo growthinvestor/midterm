@@ -116,8 +116,9 @@ Environment variables are used for dynamic configuration, particularly for loggi
     source myenv/bin/activate
     python -m calculator.repl
 
-4. Run Tests
+4. Run Tests for cov
     Run Pytest to execute all tests:
+    pytest --cov
 
 # Continuous Integration:
 
