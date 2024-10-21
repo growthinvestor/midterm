@@ -3,6 +3,16 @@
 
 This project is a Python-based advanced calculator developed for a Software Engineering graduate course midterm project. It focuses on arithmetic operations, history management using Pandas, plugin extensibility, and professional software development practices such as logging, exception handling, and testing.
 
+# Video Demonstration
+Link to video demonstration: https://youtu.be/fIJEULIHoHM
+
+The video will showcase:
+
+Core arithmetic operations.
+History management, Logging and csv file
+Plugin functionality (e.g., cube).
+REPL interface for user interaction.
+
 # Key functionalities include:
 
 Arithmetic operations (Addition, Subtraction, Multiplication, Division).
@@ -133,12 +143,3 @@ LBYL is used in the REPL to check if user commands are valid before executing th
 EAFP is used in history management where the program attempts to read from the history file and handles errors if the file doesn’t exist.
 
 
-# Video Demonstration
-Link to video demonstration ().
-
-The video will showcase:
-
-Core arithmetic operations.
-History management, Logging and csv file
-Plugin functionality (e.g., cube).
-REPL interface for user interaction.
